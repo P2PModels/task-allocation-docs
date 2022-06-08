@@ -1,0 +1,58 @@
+site_name: Task Allocation Prototype Documentation
+site_dir: ./build/
+
+repo_url: https://github.com/P2PModels/task-allocation-prototype
+repo_name: Task Allocation
+
+nav:
+    - Home: index.md
+    - Roadmap: roadmap.md
+    - Web3:
+      - Round Robin algorithm: web3/RR-TA-smart-contract.md
+    - MetaDocs: metadocs.md
+
+
+theme:
+    name: material
+    favicon: assets/images/favicon.ico
+    logo: assets/images/logo.png
+    palette:
+        - media: '(prefers-color-scheme: light)'
+          scheme: default
+          primary: light green
+          accent: pink
+          toggle:
+              icon: material/toggle-switch-off-outline
+              name: Switch to dark mode
+        - media: '(prefers-color-scheme: dark)'
+          scheme: slate
+          primary: pink
+          accent: light green
+          toggle:
+              icon: material/toggle-switch
+              name: Switch to light mode
+
+features:
+    - header.autohide
+
+extra:
+    social:
+        - icon: fontawesome/solid/mouse-pointer
+          link: https://p2pmodels.eu
+          name: P2PModels website
+
+        - icon: fontawesome/brands/twitter
+          link: https://twitter.com/p2pmod
+          name: P2PModels on Twitter
+
+        - icon: fontawesome/brands/github
+          link: https://github.com/P2PModels
+          name: P2PModels on Github
+
+plugins:
+    - git-revision-date
+
+markdown_extensions:
+    - admonition
+    - toc:
+          permalink: true
