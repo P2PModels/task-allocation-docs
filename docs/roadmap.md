@@ -21,9 +21,9 @@ The Task Allocation Prototype (TAP) will simulate two scenarios:
 
 ---
 
-## **TAP Round robin + calendar** - v2.0
+## Milestone | **TAP** - v2.0
 
-### Milestone | **Refactoring: removing Aragon dependencies**
+### Epic: **Refactoring: removing Aragon dependencies**
 
 !!! important "As a developer I want to have a simpler smart contract (dependencies wise) so I can develope faster and mantain less." 
     - The smart contract doesn't use Aragon stack. 
@@ -35,10 +35,45 @@ The Task Allocation Prototype (TAP) will simulate two scenarios:
     - The suubgraph doesn't use Aragon connector. 
     - The webapp hooks implement the logic necessary to directly connect to The Graph. Fake subscriptions implemented by Aragon connector are changed by query pooling.
 
+#### Epic: User landing page update
+
+!!! important "As a user I want to see an updated design so that I can have a better user experience"
+    - The header of the site is containerized.
+    - A footer is added to the page.
+
+!!! important "As a user I want to have an onboarding process so that I can get informed of the features of the prototype"
+    - An onboarding process is started the first time the users access the website.
+
+
 ---
 
-### Milestone | **Webapp frontend update**
+## Milestone | **TAP First Come First Serve** - v2.0
 
+#### Epic: User landing page
+
+!!! important "As a user I want to be able to see a short description of the current distribution model so I can be informed." 
+    - A banner with a description of the current model its shown in the user landing page. 
+
+!!! important "As a user I want to be able to see only the tasks available so I can focus on choosing the following task" 
+    - All the avalable tasks are shown to the user. 
+
+!!! important "As a user I want to be able to see only the task assigned so I can focus on my current job" 
+    - If a task has been assigned to the user, only the card of the assigned task will be shown. 
+
+#### Epic: **Implement smart contract**
+
+!!! important "TODO" 
+    - TODO
+
+
+---
+
+## Milestone |  **TAP Round Robin** - v2.0
+
+### Epic: **Implement smart contract**
+
+!!! important "TODO" 
+    - TODO
 
 #### Epic: User landing page
 
@@ -51,23 +86,17 @@ The Task Allocation Prototype (TAP) will simulate two scenarios:
 !!! important "As a user I want to be able to see only the task assigned so I can focus on my current job" 
     - If a task has been assigned to the user, only the card of the assigned task will be shown. 
 
-!!! important "As a user I want to see an updated design so that I can have a better user experience"
-    - The header of the site is containerized.
-    - A footer is added to the page.
-
-!!! important "As a user I want to have an onboarding process so that I can get informed of the features of the prototype"
-    - An onboarding process is started the first time the users access the website.
-
 
 ---
 
-### Milestone | **Calendar**
+## Milestone |  **TAP Round Robin + calendar ** - v2.0
+
+
+### Epic: **Calendar**
 
 !!! important "As a user I want to be able to select my working hours so I can get available tasks while I'm working"
 - The algorithm takes into account if the user is working.
 - The webapp has a calendar in which the user can select her working hours. 
-
-#### Epic: Add functionality to Web3
 
 !!! important "As a user I want to be able to set my availability and store it in the smart contract so that the algorithm automatically takes that into account" 
     - The smart contract implements a data structure to take availability of users into account.
@@ -76,8 +105,6 @@ The Task Allocation Prototype (TAP) will simulate two scenarios:
 !!! important "As a user I want to be able to configure my working hours through the webapp so that I don't need technical knowledge about the blockchain."    
     - The subgraph entities are updated with new fields
     - The subgraph listens to new events
-
-#### Epic: Add functionality to webapp
 
 !!! important "As a user I want to be able see a calendar with week days and hours slots so I can plan working hours." 
     - There is a button in the user landing page that opens a calendar popup. 
@@ -96,12 +123,7 @@ The Task Allocation Prototype (TAP) will simulate two scenarios:
 
 ---
 
-### Milestone | **Multiple algorithms**
-
-
-#### Epic: FSCFS (TODO)
-!!! warning "TODO" 
-    - TODO
+### Milestone | **Administrate algorithms**
 
 #### Epic: Admin page
 
