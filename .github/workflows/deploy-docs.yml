@@ -1,0 +1,22 @@
+# This workflow deploy the docs to the server
+
+name: Deploy docs site
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  deploy:
+
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout repo
+      uses: actions/checkout@v3
+    - name: Remove previous back-up
+      run: rm -rf /home/prototype/wallofshame-docs/build-backup/
+    - name: Move previous build to back-up
+      run: mv /home/prototype/wallofshame-docs/build/ /home/prototype/wallofshame-docs/build-backup/
+    - name: Deploy to webroot
+      run: mv build/ /home/prototype/wallofshame-docs/build/
