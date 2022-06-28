@@ -10,6 +10,7 @@ nav:
     - Web3:
       - Round Robin algorithm: web3/RR-TA-smart-contract.md
     - MetaDocs: metadocs.md
+    - Calendar: calendar.md
 
 
 theme:
@@ -37,9 +38,7 @@ features:
 
 extra:
     social:
-        - icon: fontawesome/solid/mouse-pointer
-          link: https://p2pmodels.eu
-          name: P2PModels website
+
 
         - icon: fontawesome/brands/twitter
           link: https://twitter.com/p2pmod
