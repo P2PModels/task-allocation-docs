@@ -2,7 +2,7 @@
 
 This model adds an important feature to the previous one. Now the users have to set their working hours on a calendar, this availability schedule will be taken into account when the smart contract assigns the tasks.
 
-## User workflow
+## User workflow (to do)
 
 <div style="display: grid; grid-template-columns: auto auto; grid-gap: .5rem">
     <img src="/assets/images/rr-user-view-1.png" alt="User empty feed view">
