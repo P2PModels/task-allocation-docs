@@ -1,29 +1,32 @@
-# __Task Allocation prototype__
-
+# **Task Allocation prototype**
 
 ## Introduction
 
-At P2PModels we are implementing a new version of the Task Allocation prototype, to remove Aragon from the stack and implement new features such as a calendar to let the users select their working hours so that the algorithm takes them into account when assigning tasks. 
+At P2PModels we are implementing a new version of the Task Allocation prototype with the following objectives:
+
+- Remove Aragon from the stack.
+- Implement a new feature for the Round Robin model (add calendar availavility).
+- Improve admin experience by implementing a complete web interface to manage the prototype.
 
 ## Prototype architecture
 
-The previous version of the prototype implemented the following architecture (from the article [Task assignment in Amara. Prototyping Round Robin with blockchain (I)](https://p2pmodels.eu/task-assignment-in-amara-prototype-round-robin/)):
+The previous version of the prototype implemented a different architecture, explained in detail in the article [Task assignment in Amara. Prototyping Round Robin with blockchain (I)](https://p2pmodels.eu/task-assignment-in-amara-prototype-round-robin/). In this new version of the protoype the architecture has been simplified.
 
 <img src="/assets/images/architecture.jpg" alt="Architecture">
 
-Some changes are being introduced, we'll comment them through the description of the previous architecture:
+At the front-end level the webapp has been extended adding several views:
 
-"At the blockchain level we find the Round Robin smart contract, which will serve as the application contract and will inherit from Base Task Allocation. The task of this contract is to abstract common characteristics of all contracts that implement task assignment models, whether permissions, events, status variables, etc.
+- Configuration view: this view allows the admin to configure a url that can be shared with the user so that the correct user and model are set for the test.
 
-As with the previous prototype, we will use a database to store the Amara demo accounts and a server that will act as API proxy to connect to the Amara API and obtain information related to the tasks stored in the smart contract.
+- User view: now this view uses url parameters to configure the model used. A new model has been introduced, the round robin + calendar model, which lets the user set an availability calendar so the algorithm takes it into account when assigning new tasks.
 
-We will also use a second server, corresponding to the Transaction Manager component, that will be in charge of reassigning the tasks once their allotted time period has lapsed. This will be done through cron jobs, which will be run by sending a transaction to the contract whenever a task’s allocatted period of time is up, thereby reassigning the task to a new user. The server will listen to contract events that are issued when a new job is created in order to then prepare a cron job.
+- Admin view: the new admin view lets the admin manage all the model, only one at a time, providing a user friendly interface that simplifies all actions: restarting the prototype and start and stop the manager. Several information tables have been added so that the state of the experiment its easier to track.
 
-The idea behind this component is to cover the costs related to these transactions. We want to spare the users (linguists) this expense, as it could severely affect the user experience and usability of the prototype. For the time being, costs will be assumed by a P2P Models Ethereum account, but in the future, an Amara account could be used to handle expenses. Another solution could be a multi-signature account controlled by the linguists themselves.
+At the back-end level the task manager server has been removed, now the client app (in the admin view) manages the reallocation of tasks using timeouts instead of cron jobs.
 
-In order to connect with the smart contracts, we will use ~~the Round Robin Connector, developed specifically for the prototype using Aragon Connect~~ The Graph and Ethers library to directly connect to the Ethereum blockchain." 
+Moreover, Aragon has been removed from the stack. Therefore the underlying DAO that used to operate the task allocation app has been removed.Now each model consists of and independent smart contract and a subgraph that keeps track of the current state of each instance.
 
-
+Finally, at the blockchain level the only changes introduced have been the creation of the new model alongside the debugging of some features.
 
 ## Technology stack
 
@@ -31,43 +34,31 @@ Below is a diagram featuring the technologies used in the development of this pr
 
 <img src="/assets/images/stack.jpg" alt="Technology stack">
 
-The stack is actually being updated. Aragon its being removed to simplify the architecture since the DAO was not being used.
-
-
 ## Get started - development local environment
 
-In order to set up a local environment for the protoype (connected to the Rinkeby network) you need to set up the following services:
+In order to set up a local environment for the protoype (connected to the Goerli network) you only need to set up a local server with the client app:
 
-- Ethers manager: its a containerized service to handle the task allocation actions. It reallocates the task to the proper user and updates state variable on events from the smart contract.
+- Task allocation frontend: at least two clients have to be active at the same time. One in the admin view (/admin) which will start and stop the tasks manager. And a second one in a user view, whici will be able to accept tasks, reject them... depending on the selected model.
 
-``` bash
+```bash
 
-git clone https://github.com/p2pmodels/ether-manager 
-cd ether-manager
-docker container build . -t ether-manager:latest
-docker run ether-manager:latest
-
-```
-
-
-- Front end: React app.
-
-``` bash
-
-git clone https://github.com/p2pmodels/task-allocation-frontend 
+git clone https://github.com/p2pmodels/task-allocation-frontend
 cd task-allocation-frontend
 npm install
 npm start
 
 ```
-In case you have any errors installing dependencies try cleaning up the cache.
 
+- Task allocation prototype: a repo containing the smart contracts (smart-contracts folder) and subgraphs (subgraphs folder) for each model. It uses hardhat for local testing and testnet deployment of the smart contracts and The Graph protocol to create the subgraphs to track the smart contract events and process the information to be requested by the client app.
+
+```bash
+
+git clone https://github.com/p2pmodels/task-allocation-prototype
+
+```
+
+In case you have any errors installing dependencies try cleaning up the cache.
 
 ## License
 
 This prototype is licensed under [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.en.html)
-
-
-
-
-

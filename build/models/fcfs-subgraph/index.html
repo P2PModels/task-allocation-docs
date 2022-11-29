@@ -13,7 +13,7 @@
     
     
       
-        <title>Agents simulation - Task Allocation Prototype Documentation</title>
+        <title>Subgraph - Task Allocation Prototype Documentation</title>
       
     
     
@@ -65,6 +65,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#subgraph" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -93,7 +98,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Agents simulation
+              Subgraph
             
           </span>
         </div>
@@ -219,12 +224,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
       
       
       
@@ -245,12 +252,14 @@
               
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_3_1" type="checkbox" id="__nav_3_1" checked>
       
       
       
@@ -273,7 +282,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/fcfs-model/" class="md-nav__link">
+      <a href="../fcfs-model/" class="md-nav__link">
         Description
       </a>
     </li>
@@ -287,7 +296,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/fcfs-smart-contract/" class="md-nav__link">
+      <a href="../fcfs-smart-contract/" class="md-nav__link">
         Smart contract
       </a>
     </li>
@@ -299,11 +308,79 @@
               
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../models/fcfs-subgraph/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Subgraph
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Subgraph
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entities" class="md-nav__link">
+    Entities
+  </a>
+  
+    <nav class="md-nav" aria-label="Entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    Enums
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -348,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/rr-model/" class="md-nav__link">
+      <a href="../rr-model/" class="md-nav__link">
         Description
       </a>
     </li>
@@ -362,7 +439,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/rr-smart-contract/" class="md-nav__link">
+      <a href="../rr-smart-contract/" class="md-nav__link">
         Smart contract
       </a>
     </li>
@@ -376,7 +453,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/rr-subgraph/" class="md-nav__link">
+      <a href="../rr-subgraph/" class="md-nav__link">
         Subgraph
       </a>
     </li>
@@ -423,7 +500,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/rr-cal-model/" class="md-nav__link">
+      <a href="../rr-cal-model/" class="md-nav__link">
         Description
       </a>
     </li>
@@ -437,7 +514,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/rr-cal-smart-contract.md" class="md-nav__link">
+      <a href="../rr-cal-smart-contract.md" class="md-nav__link">
         Smart contract
       </a>
     </li>
@@ -451,7 +528,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../models/rr-cal-subgraph/" class="md-nav__link">
+      <a href="../rr-cal-subgraph/" class="md-nav__link">
         Subgraph
       </a>
     </li>
@@ -504,6 +581,50 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#entities" class="md-nav__link">
+    Entities
+  </a>
+  
+    <nav class="md-nav" aria-label="Entities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#task" class="md-nav__link">
+    Task
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#user" class="md-nav__link">
+    User
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enums" class="md-nav__link">
+    Enums
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -515,22 +636,45 @@
             <article class="md-content__inner md-typeset">
               
                 
-  <a href="https://github.com/P2PModels/task-allocation-prototype/edit/master/docs/experimentation/agents-simulation.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/P2PModels/task-allocation-prototype/edit/master/docs/models/fcfs-subgraph.md" title="Edit this page" class="md-content__button md-icon">
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
 
-  <h1>Agents simulation</h1>
-
-
+<h1 id="subgraph">Subgraph<a class="headerlink" href="#subgraph" title="Permanent link">&para;</a></h1>
+<p>A subgraph for the The Graph protocol has been developed. Therefore a Graphql endpoint is exposed to be queried by the client app.</p>
+<h2 id="entities">Entities<a class="headerlink" href="#entities" title="Permanent link">&para;</a></h2>
+<h3 id="task">Task<a class="headerlink" href="#task" title="Permanent link">&para;</a></h3>
+<pre><code class="language-graphql">type Task @entity {
+  id: ID!
+  userId: String!
+  status: TaskStatus!
+}
+</code></pre>
+<p>Main entity, tracks the current status of the task and the user that has accepted it.</p>
+<h3 id="user">User<a class="headerlink" href="#user" title="Permanent link">&para;</a></h3>
+<pre><code class="language-graphql">type User @entity {
+  id: ID!
+  hasTask: Boolean!
+}
+</code></pre>
+<p>Generic user entity, also contains a flag to track whether the user is available (no task accepted) or bussy (task accepted).</p>
+<h2 id="enums">Enums<a class="headerlink" href="#enums" title="Permanent link">&para;</a></h2>
+<pre><code class="language-graphql">enum TaskStatus {
+  NonExistent
+  Available
+  Accepted
+  Completed
+}
+</code></pre>
 
   <hr>
 <div class="md-source-file">
   <small>
     
       Last update:
-      2022-06-13
+      2022-11-29
     
   </small>
 </div>
@@ -547,6 +691,42 @@
       </main>
       
         <footer class="md-footer">
+  
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" >
+      
+        
+        <a href="../fcfs-smart-contract/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Smart contract" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Smart contract
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../rr-model/" class="md-footer__link md-footer__link--next" aria-label="Next: Description" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Description
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">

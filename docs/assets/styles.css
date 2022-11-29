@@ -1,0 +1,55 @@
+:root{
+    --color-black: #222;
+}
+
+.badge-container {
+    display: flex;
+}
+
+.badge {
+    border: 1px solid var(--color-black);
+    border-radius: .25rem;
+    margin:  -.75rem .2rem 0;
+    padding: 0 .25rem;
+    font-size: .5rem;
+
+}
+
+.badge:first-child {
+    margin-left: 0;
+}
+
+.badge-override {
+    color: var(--color-black);
+    background-color: rgb(226, 177, 202);
+}
+
+.badge-external {
+    color: var(--color-black);
+    background-color: rgb(177, 224, 226);
+}
+
+.badge-public {
+    color: var(--color-black);
+    background-color: rgb(177, 226, 185);
+}
+
+.badge-private {
+    color: var(--color-black);
+    background-color: rgb(226, 188, 177);
+}
+
+.ta-center {
+    text-align: center;
+}
+
+.grid-2col {
+    display: grid; 
+    grid-template-columns: auto auto; 
+    grid-gap: .5rem;
+    margin-top: 2rem;
+}
+
+.grid-2col img{
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}

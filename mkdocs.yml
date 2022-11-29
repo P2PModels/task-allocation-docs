@@ -5,54 +5,67 @@ repo_url: https://github.com/P2PModels/task-allocation-prototype
 repo_name: Task Allocation
 
 nav:
-    - Home: index.md
-    - Roadmap: roadmap.md
-    - Web3:
-      - Round Robin algorithm: web3/RR-TA-smart-contract.md
-    - MetaDocs: metadocs.md
-
+  - Home: index.md
+  - Roadmap: roadmap.md
+  - Models:
+      - "First Come First Serve":
+          - Description: models/fcfs-model.md
+          - Smart contract: models/fcfs-smart-contract.md
+          - Subgraph: models/fcfs-subgraph.md
+      - "Round Robin":
+          - Description: models/rr-model.md
+          - Smart contract: models/rr-smart-contract.md
+          - Subgraph: models/rr-subgraph.md
+      - "Round Robin with calendar":
+          - Description: models/rr-cal-model.md
+          - Smart contract: models/rr-cal-smart-contract.md
+          - Subgraph: models/rr-cal-subgraph.md
+  - MetaDocs: metadocs.md
 
 theme:
-    name: material
-    favicon: assets/images/favicon.ico
-    logo: assets/images/logo.png
-    palette:
-        - media: '(prefers-color-scheme: light)'
-          scheme: default
-          primary: light green
-          accent: pink
-          toggle:
-              icon: material/toggle-switch-off-outline
-              name: Switch to dark mode
-        - media: '(prefers-color-scheme: dark)'
-          scheme: slate
-          primary: pink
-          accent: light green
-          toggle:
-              icon: material/toggle-switch
-              name: Switch to light mode
+  name: material
+  favicon: assets/images/favicon.ico
+  logo: assets/images/logo.png
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: light green
+      accent: pink
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: pink
+      accent: light green
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
 
 features:
-    - header.autohide
+  - header.autohide
 
 extra:
-    social:
-        - icon: fontawesome/solid/mouse-pointer
-          link: https://p2pmodels.eu
-          name: P2PModels website
+  social:
+    - icon: fontawesome/solid/arrow-pointer
+      link: https://p2pmodels.eu
+      name: P2PModels website
 
-        - icon: fontawesome/brands/twitter
-          link: https://twitter.com/p2pmod
-          name: P2PModels on Twitter
+    - icon: fontawesome/brands/twitter
+      link: https://twitter.com/p2pmod
+      name: P2PModels on Twitter
 
-        - icon: fontawesome/brands/github
-          link: https://github.com/P2PModels
-          name: P2PModels on Github
+    - icon: fontawesome/brands/github
+      link: https://github.com/P2PModels
+      name: P2PModels on Github
+
+extra_css:
+  - assets/styles.css
 
 plugins:
-    - git-revision-date
+  - git-revision-date
 
 markdown_extensions:
-    - admonition
-    - toc:
-          permalink: true
+  - admonition
+  - toc:
+      permalink: true
